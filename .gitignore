@@ -1,0 +1,43 @@
+# Project-specific ignores
+analyzer.db
+analyzer.db-shm
+analyzer.db-wal
+server/analyzer.db
+server/analyzer.db-shm
+server/analyzer.db-wal
+server/server.log
+uploads/*
+!uploads/.gitkeep
+server/uploads/*
+!server/uploads/.gitkeep
+scratch/
+*.code-workspace
+
+# Dependency directories
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build outputs
+client/dist/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

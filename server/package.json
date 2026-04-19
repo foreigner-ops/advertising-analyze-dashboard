@@ -15,6 +15,7 @@
     "cors": "^2.8.6",
     "csv-parser": "^3.2.0",
     "csv-string": "^4.1.1",
+    "exceljs": "^4.4.0",
     "express": "^5.2.1",
     "multer": "^2.1.1",
     "xlsx": "^0.18.5"

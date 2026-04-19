@@ -1,11 +1,21 @@
 {
-  "name": "shaggy-analyzer",
+  "name": "advertising-analyzer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx concurrently \"npm start --prefix server\" \"npm run dev --prefix client\"",
-    "start": "npm run dev"
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm start --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "start": "npm run dev",
+    "clean": "rm -rf node_modules package-lock.json client/node_modules client/package-lock.json server/node_modules server/package-lock.json",
+    "setup": "npm run clean && npm install && npm install --prefix client && npm install --prefix server"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   },
   "keywords": [],
   "author": "",

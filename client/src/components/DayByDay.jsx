@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Calendar } from 'lucide-react';
+import { API_URL } from '../config';
+
 
 function DayByDay({ asin, onBack }) {
   const [data, setData] = useState([]);
@@ -8,9 +10,10 @@ function DayByDay({ asin, onBack }) {
   useEffect(() => {
     const fetchDetail = async () => {
       try {
-        const res = await fetch(`http://localhost:3001/day-by-day/${asin}`);
+        const res = await fetch(`${API_URL}/day-by-day/${asin}`);
         const json = await res.json();
-        setData(json);
+
+        setData(Array.isArray(json) ? json : []);
       } catch (err) {
         console.error(err);
       } finally {
@@ -70,7 +73,12 @@ function DayByDay({ asin, onBack }) {
                   <td style={{ color: row.spend > 0 ? 'var(--danger-color)' : 'inherit' }}>
                     {formatCurrency(row.spend)}
                   </td>
-                  <td>{organicOrders}</td>
+                  <td>
+                    {organicOrders < 0 && (
+                      <span style={{ color: 'var(--danger-color)', marginRight: '4px', cursor: 'help' }} title="Negative organic orders usually mean ad attribution is at the Campaign level and including other products.">⚠️</span>
+                    )}
+                    {organicOrders}
+                  </td>
                   <td>
                     <span className={tacos > 25 ? 'metric-negative' : 'metric-positive'}>
                       {tacos.toFixed(1)}%
