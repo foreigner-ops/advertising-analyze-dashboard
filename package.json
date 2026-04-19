@@ -1,0 +1,13 @@
+{
+  "name": "shaggy-analyzer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx concurrently \"npm start --prefix server\" \"npm run dev --prefix client\"",
+    "start": "npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
