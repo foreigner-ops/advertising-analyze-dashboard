@@ -24,7 +24,7 @@ A powerful dashboard for analyzing Amazon advertising and Merch on Demand data. 
 
 1. **Clone the repository**:
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/foreigner-ops/advertising-analyze-dashboard
    cd advertising-analyze-dashboard
    ```
 
