@@ -2,7 +2,6 @@
 
 A powerful dashboard for analyzing Amazon advertising and Merch on Demand data. This tool allows you to import Amazon reports (CSV/XLSX) and visualize your performance metrics in a centralized, glassmorphic interface.
 
-![Dashboard Preview](https://via.placeholder.com/800x450.png?text=Advertising-Analyzer+Dashboard+Preview)
 
 ## ✨ Features
 
